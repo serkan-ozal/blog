@@ -17,6 +17,12 @@ public class AmazonS3MultipartFileUploadDemo {
 	private static final Logger logger = LogUtil.getLogger();
 
 	public static void main(String[] args) throws IOException {
+		/**
+		 * NOTE: 
+		 * 		You must set your unique "Access Key" and "Secret Key" values to 
+		 * 		"src/main/resources/config/aws/credentials.properties" file.
+		 */
+		
 		File sampleInputFile = new File("SampleFileToUpload.txt");
 		if (sampleInputFile.exists()) {
 			logger.info("Existing sample input file detected: " + sampleInputFile.getAbsolutePath());
