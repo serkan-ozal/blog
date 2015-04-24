@@ -1,15 +1,14 @@
 package tr.com.serkanozal.blog.year_2015.object_header;
 
+import sun.misc.Unsafe;
 import tr.com.serkanozal.jillegal.util.JvmUtil;
 
-public class ObjectHeaderDemo {
+@SuppressWarnings("restriction")
+public abstract class ObjectHeaderDemo {
 
-	public static void main(String[] args) {
-		Foo foo = new Foo();
-		JvmUtil.dump(foo, 32);
-	}
+	protected static final Unsafe UNSAFE = JvmUtil.getUnsafe();
 	
-	static class Foo {
+	protected static class Foo {
 		
 	}
 
